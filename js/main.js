@@ -355,7 +355,7 @@ $( document ).ready(function() {
 
 	$('.quiz-04 .answer').click(function(){	
 		$photo+=$(this).attr('answerval');
-		$photourl='img/crushphoto/'+$photo+(Math.floor(Math.random() * 2)+1)+'.jpg';
+		$photourl='img/'+$photo+(Math.floor(Math.random() * 2)+1)+'.jpg';
 
 		$('.quiz').append('<style>.quiz:before{content: "";position: absolute;top: -9999px;left: -9999px;background: url('+$photourl+')}</style>');
 
