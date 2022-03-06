@@ -214,7 +214,7 @@ function endwhackgame()
 		$('.quiz-ending').css('display','none');
 		$('.quiz-ending-sub').css('display','none');		
 		
-		$('.photo-ending-screen .voucher .subtitle').html('MINISTOP táº·ng báº¡n 01 cĂ¢y kem tÆ°Æ¡i<br>ngon hÆ¡n ngÆ°á»i yĂªu cÅ©^^!');
+		$('.photo-ending-screen .voucher .subtitle').html('Tui tặng bạn một que kem giải bùa nhé!');
 		
 		TweenMax.to($('.background .urgo'), 0.2, {bottom:"10%", opacity:"0", ease: Power1.easeIn});
 		$('.photo-ending-screen').css('display','block');
