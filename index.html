@@ -1,0 +1,257 @@
+
+<html>
+<head>
+
+	<script src="js/MotionPathPlugin.js"></script>	
+
+	<title>Lễ KHÔNG tình nhân</title>
+    <meta content="Lễ KHÔNG tình nhân" name="description" />
+
+    <meta property="og:image" content="img/thumb.jpg" />
+    <meta property="og:title" content="Lễ KHÔNG tình nhân" />
+    <meta property="og:type" content="website" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<meta property="og:image" content="" />
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/JsBarcode.all.min.js"></script>
+	<script src="js/jquery-barcode.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+	<script src="js/jquery.cookie.js"></script>
+
+	
+
+
+	<link rel="Stylesheet" type="text/css" href="css/croppie.css" />
+    <link rel="Stylesheet" type="text/css" href="css/demo.css" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+	<link href="css/style-notmobile.css" type="text/css" rel="stylesheet" />
+	<link href="css/whack.css" type="text/css" rel="stylesheet" />
+	<script>
+	
+  
+
+	$scrollallow = false;
+	document.addEventListener("touchmove", function(event){
+    if (!$scrollallow) {
+    	event.preventDefault();
+    }
+	}, { passive: false });
+	</script>
+
+
+
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+	
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0&appId=450134445809850&autoLogAppEvents=1" nonce="D71o1tmm"></script>
+<div class="se-pre-con"><span>Chờ một xíu..<span></div>
+<style>
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(img/preloader-r.gif) center no-repeat #fff;
+}
+.se-pre-con span
+{
+	display: block;
+	position: absolute;
+	top: calc(50% + 60px);
+	font-size: 16px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+</style>
+<script>
+	
+
+</script>
+<div class="gradient-bg">
+</div>
+<div class="container home-screen" style="display: block;">
+	<img class="title" src="img/title.png">
+	<a href="/"><img class="logo" src="img/logo.png"></a>
+	<img class="urgo" src="img/footer.png">
+
+	<div class="intro">
+		<p class="tagline">
+			<b class="bigger">Bạn Ế ư?</b>
+		</p>
+		<p class="tagline">
+			Đừng lo, có tui<br>bạn vẫn vui bỏ xừ!!! ahihi
+		</p>
+	<div class="button start">Bắt đầu nào</div>
+	</div>
+</div>
+<div class="container background" style="display: none">
+	<img class="title" src="img/title-small.png">
+	<img class="urgo" src="img/footer.png">
+
+</div>
+<div class="container quiz" style="display: none"><!-- original none -->
+		<p class="question">
+	
+	
+	<div class="quiz-body quiz-01" style="display: block">
+		<p class="question">
+			Đối tượng bạn thích hẹn hò là…
+		</p>
+		
+		<div class="button answer" answerval="a">Nam</div>
+		<div class="button answer" answerval="b">Nữ</div>
+	</div>
+
+	<div class="quiz-body quiz-02" style="left:100%"><!-- original left `100% -->
+		<p class="question">
+			Thế bạn đã từng có mảnh tình vắt vai nào chưa?
+		</p>
+		
+		<div class="button answer ex" answerval="1">Đã được nếm mùi lợi hại <b class="emoji">😩</b></div>
+		<div class="button answer zin" answerval="2">Team Ế trường tồn <b class="emoji">😤😤😤</b></div>
+	</div>
+
+	<div class="zin-answer">
+	<p class="omnomnom">
+	<b>“Ế” là vì chờ người <u>tử tế</u> để yêu <b class="emoji">😤</b></b><br>
+	Tìm ngay tình yêu đích thực<br>của bạn tại đây!
+	</p>
+	</div>
+
+	<div class="quiz-body quiz-03" style="left:00%; display: none">
+		<p class="question">
+			Với bạn, ngoại hình của người ấy cỡ nào là đủ?
+		</p>
+		
+		<div class="button answer longanswer" answerval="a"><span>Body chuẩn như người mẫu,<br> khuôn mặt thanh tú</span></div>
+		<div class="button answer longanswer" answerval="b"><span>Chí ít thì mặt cũng dễ thương,<br> thân hình tương đối</span></div>
+		<div class="button answer longanswer" answerval="c"><span>Ngoại hình không quan trọng,<br> quan trọng là số dư thẻ</span></div>
+	</div>
+
+	<div class="quiz-body quiz-04" style="left:100%; display: block">
+		<p class="question">
+			Bạn thích người có tính cách thế nào?
+		</p>
+		
+		<div class="button answer " answerval="a"><span>Hài hước, vui vẻ</span></div>
+		<div class="button answer " answerval="b"><span>Trầm tĩnh, chín chắn</span></div>
+		<div class="button answer longanswer" answerval="c"><span>Không có tiêu chuẩn,<br> cứ thích là nhích thôi!</span></div>
+	</div>
+
+	<div class="button end-quiz long-btn" style="display: none" ><span>Click để xem hình ảnh<br>người yêu tương lai của bạn</span></div>
+
+</div>
+
+
+<div class="container photo-screen" style="display: none">
+	<div class="photo-frame">
+		<div class="photo-container">
+			<img class="crush" src="" ssrc="https://scontent.fsgn5-3.fna.fbcdn.net/v/t1.0-9/82093747_1411127982395761_6877989202231820288_o.jpg?_nc_cat=111&_nc_ohc=yHfqYCBT4hMAQmSgUuD8v0OeQcUznqce8GcBcBOvZhH08lyDqNmU_vsEg&_nc_ht=scontent.fsgn5-3.fna&oh=330e342c46204045944539ef8a96c04f&oe=5EA69D38">
+		</div>
+	</div>
+</div>
+
+<div class="photo-ending-screen" style="display: none">
+	<div class="amulet scr-target" >
+		<p class="subtitle" style="line-height: 22px;">Tặng bạn 01 lá bùa yêu,<br>chúc bạn “thả đâu trúng đó” và thoát kiếp FA trong thời gian tới <b class="emoji">😂😂</b></p>
+		<div class="amulet-photo">
+			<img src="img/amulet.png" class="buayeu" style="display: none;">
+			<img src="img/bua-2.png" class="bua-2" style="display: none;">
+		</div>
+		<div class="barcode-guide">
+			<div class="button long-btn replay" ><span>CHƠI TIẾP ĐỂ GIẢI NGHIỆP <b>#FREE!</b></span></div>
+			<div class="button long-btn share" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small">
+				<img src="img/f.png" style="">
+				<span><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://fajizy.github.io/lekhongtinhnhanh">Share để rủ bạn bè<br>cùng chơi nào!</a></span>
+			</div>
+			<p class="link"><a href="https://fb.com/fajizy">Facebook of me</a></p>
+		</div>
+
+		<script>
+			
+		</script>
+	</div>
+</div>
+
+
+
+
+<div class="container upandcrop" style="display: none">
+	<div class="upfile" >
+		<div class="des">
+			Upload ảnh người đã cho bạn “nếm mùi” và “đấm không trượt” phát nào luôn cho hả dạ nè!
+		</div>
+		<a class="button upload--btn file-btn">
+			<span>Upload</span>
+			<input type="file" id="upload" value="Choose a file" accept="image/*" />
+		</a>
+	</div>
+	<div class="upload-demo-wrap" style="display: none">
+		<div class="des">
+			Đặt bản mặt của "hắn" thật khớp trước đã..
+		</div>
+	<div id="upload-demo"></div>
+	<div class="button play">Đấm thôi</div>
+
+	</div>
+
+</div>
+
+<div class="game" style="display: none;">
+	<div class="wrapper">
+	
+	<header style="display: block;">
+		
+		<div class="score-box" id="score-box">
+			<img class="score-ec" src="img/ec.png" style="display: none;">
+						<h2 class="score-out" id="score-out"></h2>
+
+		</div><!-- end score-box -->
+	</header>		
+		<div class="game-container" style="display: block">
+			
+			
+		</div><!-- end game-container -->
+	</div><!-- end wrapper -->
+	<img class="dead" src="img/dead.png">
+</div>
+
+<img class="dead-bubble" src="img/dead-bubble.png" style="display: none">
+<div class="scr-btn" style="display: none">
+	<div class="scr-arrow bouncing"></div>
+</div>
+<img class="hammer " src="img/hammer.png">
+<!--
+<a class="btn file-btn">
+<span>Upload</span>
+<input type="file" id="upload" value="Choose a file" accept="image/*" />
+</a>
+<button class="upload-result">Result</button>
+
+
+<div class="output"></div>
+-->
+<script src="js/main.js"></script>
+<script src="js/croppie.js"></script>
+<script src="js/upcrop.js"></script>
+<script src="js/whack.js"></script>
+<script>
+            UpCrop.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+
+
+.box2
+{
+	display: inline-block;
+	width: 200px;
+	height: 220px;
+	position: relative;
+	overflow: hidden;
+	margin: 0px 30px;
+}
+
+.sparse .box2
+{
+	margin: 0px 50px;
+}
+
+.up
+{
+	transform: translate(0, -10%);
+}
+
+.down
+{
+	transform: translate(0, 10%);
+}
+
+.box2 .sweat-l
+{	
+	width: 15%;
+	position: absolute;
+	left: 0;
+	top: 60%;
+	transform: rotate( -30deg);
+
+}
+.box2 .sweat-r
+{	
+	width: 15%;
+	position: absolute;
+	right: 0;
+	top: 60%;
+	transform: rotate( -140deg);
+
+}
+
+
+
+.box2 .face
+{
+	position: absolute;
+    width: 38%;
+    left: 29%;
+    top: 119%;
+}
+
+.box2 .hole, .box2 .hole-cover
+{
+	width: 100%;
+	display: block;
+	position: absolute;
+	bottom:0;
+}
+
+.box2 .mole
+{
+	width: 70%;
+	display: block;
+	position: absolute;
+	bottom:-100%;
+	left:13%;
+}
+
+.box2 .hitbox
+{
+	width: 70%;
+	display: block;
+	position: absolute;
+	bottom:-100%;
+	left:13%;
+	height: 100%;
+    touch-action: manipulation; 
+}
+
+.box2 .mole::after
+{
+	content: " ";
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	background: #333;
+	top:0;
+	left: 25%;
+}
+
+
+.sfx
+{
+	width:70%;
+	display: block;
+	position: absolute;
+	top: 0;
+	left:50%;
+	transform: translate(-50%, 0);
+}
+
+.hide
+{
+	display: none;
+}
+
+.sfx .star
+{
+	width: 100%;
+	display: block;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.sfx .ec
+{
+	display: block;
+	width: 40%;
+	top: 25px;
+	left: 30%;
+	position :absolute ;
+}
+
+
+
+.wrapper {
+	padding: 30px;
+	position: relative;
+}
+
+header {
+	position: relative;
+	text-align: center;
+}
+
+header:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+header h1 {
+	margin: 0;
+	float: left;
+	line-height: 35px;
+	display: none;
+}
+
+header .score-box {
+    float: none;
+    width: 100%;
+    padding: 0;
+    border: none;
+}
+
+.score-box h2 {
+	margin-top: 0px;
+	text-align: center;
+	display: inline-block;
+	color: #111;
+	font-weight: bold;
+}
+
+.score-box img
+{
+	width: 45px;
+	display: inline-block;
+    margin-bottom: -10px;
+    margin-right: 5px;
+}
+.score-box p {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.btn-start {
+	display: block;
+	margin: 10px auto;
+	width: 150px;
+	height: 60px;
+	border: 3px #333 solid;
+	background: none;
+	font-size:24px;
+	font-family: Gotham;
+	font-weight:800;
+	line-height:26px;
+	
+}
+
+.game-container {
+	width: 100%;
+	margin: 0;
+	position: absolute;
+	left: 0;
+	text-align:center;
+}
+.wrapper{
+}
+
+
+.row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+.mole-pic {
+	width: 80px;
+	position: absolute;
+	left: 50px;
+	bottom: -78px;
+	transition: bottom 0.5s ease;
+}
+
+.mole-pic.up {
+	bottom: 0;
+}
+
+.mole-pic.bonked {
+	-webkit-animation-name: shake;
+  animation-name: shake;
+	-webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.dirt-pic {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+.mask {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 30px;
+	width: 100%;
+	background-color: white;
+	z-index: 5000;
+}
+
+footer {
+	margin-top: 60px;
+	text-align: center;
+}
+
+/* Animations */
+
+@-webkit-keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}

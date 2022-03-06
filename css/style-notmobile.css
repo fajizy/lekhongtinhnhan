@@ -1,0 +1,236 @@
+
+@media screen and (min-width: 700px){
+
+    .home-screen .logo
+    {
+        width: 80px;
+        height: 80px;
+        top: 30px;
+        right: calc(50% - 300px);
+    }
+    .home-screen .title
+    {
+        height: 45%;
+        width: auto;
+    }
+    
+    
+    .home-screen .intro
+    {
+        top: 65%;
+    }
+    
+    .home-screen .intro .tagline .bigger
+    {
+        font-size: 34px;
+    }
+    
+    .container .urgo
+    {
+        display: none;
+    }
+    
+    .home-screen::after,
+    .background::after
+    {
+        display: block;
+        width: 100%;
+        height: 150px;
+        content: "";
+        background: url(../img/footer.png) repeat-x;
+        background-size: 380px auto;
+        position: absolute;
+        left: 0;
+        bottom: -70px;
+        opacity: 0.3;	
+        transition: all 400ms ease-in-out;
+        z-index: -1;
+    
+    }
+    
+    .middle-footer::after
+    {
+        bottom: 40%;
+    }
+    
+    .background .title {
+        width: 70%;
+        top: 10%;
+    }
+    
+    
+    .quiz .quiz-body .question
+    {
+        font-size: 20px;
+    }
+    
+    .quiz .quiz-body .answer 
+    {
+        width: 350px!important;
+        margin: 20px auto;
+    }
+    .quiz-03 .longanswer,
+    .quiz-04  .longanswer,
+    .long-btn 
+    {
+        height: 60px!important;
+        width: 350px!important;
+        line-height: 20px!important;
+    }
+    
+    .quiz .quiz-body .answer span
+    {
+        line-height: 20px;
+    }
+    
+    .zin-answer::before
+    {
+        width: 280px;
+        height: 210px;
+    }
+    
+    .small-urgo::before
+    {
+        width: 200px;
+        height: 150px;
+    }
+    .omnomnom
+    {
+        font-size: 20px;
+    }
+    .omnomnom b
+    {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .photo-frame {
+        width: 450px;
+        height: 450px;
+    }
+    
+    .photo-frame .photo-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .photo-ending-screen .end-intro
+    {
+        font-size: 28px;
+    }
+    
+    
+    .end-intro::before,
+    .end-intro::after
+    {
+        display: none;
+    }
+    
+    .photo-ending-screen .separator
+    {
+        width: 150px;
+        margin: 50px auto 40px auto;
+    }
+    
+    .upload-demo-wrap
+    {
+        top:45%;
+    }
+    
+    .upload-demo-wrap .des {
+    margin-bottom: 25px;
+    }
+    
+    .photo-ending-screen .barcode-container
+    {
+        width: 480px;
+    }
+    
+    p.guide,
+    .upandcrop .upfile .des
+    {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .score-box h2
+    {
+        font-size: 42px;
+    }
+    
+    .dead-bubble 
+    {
+        width: 120px;
+    }
+    
+    .score-box img 
+    {
+        width: 60px!important;
+    }
+    .share img {
+        top: 17px;
+    }
+    
+    }
+    
+    @media screen and (min-width: 1024px){
+    .icecream-frame, .amulet-photo
+    {
+        overflow: initial;
+    }
+    
+    .bua-2 {
+        width: auto;
+        height: 100%;
+    }
+    .bua-1 {
+        width: auto;
+        height: 25%;
+    }
+    .photo-ending-screen .barcode-container
+    {
+        margin-top: 25px;
+    }
+    .dead-bubble
+    {
+        left: calc(50% + 165px)
+    }
+    
+    .background .title {
+        width: 60%;
+        top: 10%;
+    }
+    
+    }
+    
+    @media screen and (min-width: 1025px){
+    
+    .background .title {
+        width: 700px;
+        top: 10%;
+    }
+    
+    .photo-frame {
+        width: 500px;
+        height: 500px;
+    }
+    
+    .dead-bubble
+    {
+        left: calc(50% + 165px)
+    }
+    
+    .scr-btn
+    {
+        left: 50%;
+        bottom: 100px;
+        margin-left: -25px;
+    }
+    
+    
+    
+    
+    
+    
+}

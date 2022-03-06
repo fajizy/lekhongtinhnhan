@@ -1,0 +1,846 @@
+@font-face
+{
+font-family: mygotham;
+src: url(font/Gotham-Medium.otf);
+font-weight: normal;
+}
+
+
+@font-face
+{
+font-family: mygotham;
+src: url(font/Gotham-Ultra.otf);
+font-weight: bold;
+}
+
+html {
+    box-sizing: border-box;
+        
+    overscroll-behavior: contain;
+
+    overscroll-behavior-y: contain;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
+    cursor: url(../img/hammer.png),url(../img/hammer.png),auto;
+
+
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  outline: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: mygotham;
+  
+  overscroll-behavior: contain;
+
+	-moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+   overscroll-behavior-y: contain;
+   overflow: hidden;
+   background-attachment: fixed;
+   transition: background 300ms ease-out;
+}
+
+.emoji
+{
+  line-height: 0px;
+}
+
+.hammer
+{
+  width: 100px;
+  height: auto;
+  position: absolute;
+    left: var(--mouse-x);
+    top: var(--mouse-y);
+    transform: rotate(40deg) translate(-50%, -50%) ;
+    z-index:1000;
+   display: none;
+
+}
+
+.bonkhammer
+{
+  transform: rotate(0deg) translate(-25%, -60%) ;
+
+}
+
+.gradient-bg
+{
+  display: block;
+  width: 100%;
+  height: 150vh;
+  z-index: -1;
+  position: fixed;
+  top:0;
+  left:0;
+  background: linear-gradient(221deg, rgba(237,32,36,1) 4%, rgba(106,13,14,1) 72%);
+}
+
+.container
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.home-screen .title
+{
+  width: 80%;
+  height: auto;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-screen .logo
+{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.container .urgo
+{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  transform:translate(-50%, 30%);
+  opacity: 0.5;
+
+}
+
+.home-screen .intro
+{
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  text-align: center;
+}
+
+.home-screen .intro .tagline
+{
+  margin: 0 15px 10px 15px;
+  display: block;
+  position: relative;
+  font-size:16px;
+}
+
+.home-screen .intro .tagline .bigger
+{
+    font-size:24px;
+
+}
+
+
+.button
+{
+  display: block;
+  width: 200px;
+  height: 50px;
+  border: #fff 2.5px solid;
+  border-radius: 30px;
+  margin: 30px auto;
+  line-height: 48px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background: rgba(141,21,24,0.8);
+}
+
+.button:hover
+{
+  background: rgba(212,20,35,0.8);
+}
+
+.background .title
+{
+  width: 95%;
+  height: auto;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quiz .quiz-body
+{
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translate(0,-50%);
+}
+
+
+.quiz .quiz-body .question
+{
+  font-size: 18px;
+  margin: 30px ;
+}
+
+.quiz .quiz-body .answer
+{
+  margin: 15px auto;
+  width: 280px;
+  position: relative;
+}
+
+.quiz .quiz-03,
+.quiz .quiz-04
+{
+  top: 60%;
+}
+
+.quiz-03 .longanswer , 
+.quiz-04 .longanswer,
+.long-btn
+{
+  height: 55px;
+   width: 280px;
+   position: relative;
+
+}
+
+
+
+
+.quiz .quiz-body .answer span,
+.end-quiz span,
+.long-btn span
+ {
+    line-height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    padding-top: 2px;
+}
+
+.zin-answer
+{
+  color: #fff;
+  width: 90%;
+  position: absolute;
+  font-size: 18px;
+  text-align: center;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+}
+.zin-answer::before
+{
+  content: "";
+  display: block;
+  width: 200px;
+  height: 150px;
+  background: url(../img/urgo.png);
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: 100% auto; 
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  transition: all 700ms ease-out;
+}
+
+.small-urgo::before
+{
+  width: 120px;
+  height: 90px;
+  transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+
+.upload-btn
+{
+  position: absolute;
+  bottom: 30px; 
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.upandcrop .upfile
+{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+
+.upandcrop .upfile .des
+{
+  margin: 50px 30px 0 30px;
+  font-size: 18px;
+}
+
+
+
+.upload-demo-wrap
+{
+  position : absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.upload-demo-wrap .des
+{
+  text-align: center;
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+
+.croppie-container
+{
+  padding: 0;
+
+}
+
+.croppie-container
+{
+  margin-bottom: 20px;
+}
+
+input[type="range" i] {
+    
+    color: #ddd;
+    
+}
+.croppie-container .cr-boundary {
+   
+    border-radius: 20px;
+}
+
+.croppie-container .cr-slider-wrap
+{
+  display: none;
+}
+
+.photo-frame
+{
+  width: 280px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%, -50%) rotate(-7deg);
+  background: #fff;
+  -webkit-box-shadow: -14px 13px 47px -13px rgba(0,0,0,0.38);
+  -moz-box-shadow: -14px 13px 47px -13px rgba(0,0,0,0.38);
+  box-shadow: -14px 13px 47px -13px rgba(0,0,0,0.38);
+  padding: 10px;
+}
+
+.photo-frame .photo-container
+{
+  width: 100%;
+  height: calc(100% - 20px);
+  position: relative;
+  overflow: hidden;
+
+}
+.photo-frame .photo-container::before
+{
+  content: "ÄoĂ¡n xem!";
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #999;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+}
+.photo-frame .photo-container img
+{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.photo-ending-screen
+{
+  display: block;
+  width: auto;
+  margin: 0px 15px 15px 15px;
+  color: #fff;
+  text-align: center;
+
+}
+
+.photo-ending-screen .end-intro
+{
+  font-size: 18px;
+  font-weight:bold;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.end-intro::before
+{
+  display: block;
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: -15px;
+}
+
+.end-intro::after
+{
+  display: block;
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  right: -15px;
+}
+
+.game-end .end-intro::before,
+.game-end .end-intro::after
+{
+  display: none;
+}
+
+
+.photo-ending-screen .subtitle
+{
+  font-size:16px;
+  margin: 0;
+}
+
+.photo-ending-screen .separator
+{
+  width:20%;
+  margin: 30px auto 20px auto;
+}
+
+.photo-ending-screen .barcode-container
+{
+  background:#fff;
+  width: calc(100% - 0px);
+  height: auto;
+  margin: 0px auto 10px auto;
+}
+
+.photo-ending-screen .barcode-container .barcode
+{
+  width: 100%;
+  height: auto;
+}
+
+.game
+{
+  background: #e96565;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 400ms ease-in-out;
+  -webkit-box-shadow: -14px 13px 47px -13px rgba(0,0,0,0.15);
+  -moz-box-shadow: -14px 13px 47px -13px rgba(0,0,0,0.15);
+  box-shadow: -14px 13px 47px -13px rgba(0,0,0,0.15 );
+}
+
+.dead-bubble
+{
+  display: block;
+  
+  width: 80px;
+  height: auto;
+  top: 30%;
+  left: 75%; 
+  transform: translate(-50%, -50%);
+  position: absolute;
+  
+}
+
+.dead
+{
+  width: 90%;
+    position: absolute;
+    top: 200%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.game-collapse
+{
+      width: 250px;
+      height: 250px;
+      border-radius: 250px;
+      top: 45%;
+      overflow: hidden;
+}
+
+.end-quiz
+{
+  width: 280px;
+  position: absolute;
+  top: 55%;
+  height: 55px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.voucher-date
+{
+  padding-bottom: 5px;
+    color: #b83630;
+    font-size: 10px;
+    margin: -7px 0 0 0;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.icecream-frame,
+.amulet-photo
+{
+  width: 100%;
+  margin:40px 0 0px -15px;
+  position: relative;
+  overflow: hidden; 
+}
+
+.icecream-frame img,
+.amulet-photo img
+{
+  position: absolute;
+}
+
+.kem
+{
+      height: 80%;
+  bottom: -22%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.kem-title
+{
+  height: 80%;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.bua-1
+  {
+    width: 90%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bua-2
+{
+  width: 110%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buayeu
+{
+  top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 110%;
+}
+
+.barcode-guide
+{
+  margin: 30px auto 0 auto;
+  padding-bottom: 10px;
+}
+
+.link a
+{
+    color: #ddd;
+    font-size: 12px;
+}
+
+.replay
+{
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.scr-btn
+{
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  display: block;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  border-radius:30px;
+  background: rgba(141,21,24,0.8);
+  //transition: all 300ms ease-in-out;
+
+}
+
+.scr-btn-hide
+{
+  bottom: 50px;
+  opacity: 0;
+}
+
+
+.scr-arrow
+{
+  width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.scr-arrow::before
+{
+  content: "";
+    border-left: #fff 2px solid;
+    border-bottom: #fff 2px solid;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    transform: rotate(-45deg);
+}
+
+.scr-arrow::after
+
+{
+      content: "";
+    display: block;
+    width: 21px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 11px;
+    left: 1.5px;
+    transform: rotate(90deg);
+}
+
+.bouncing
+{ -webkit-animation-name: bounce;
+    animation-name: bounce;
+  animation-iteration-count:infinite;
+  -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+}
+
+.amulet .share
+{
+  margin-top: -15px;
+}
+
+.share span
+{
+  padding-left: 30px;
+}
+
+.share img
+{
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  width: auto;
+  height: 20px;
+
+}
+
+@-webkit-keyframes bounce {
+  from, to {
+    -webkit-transform: translate3d(0%, 3px, 0);
+    transform: translate3d(0%, 3px, 0);
+  }
+
+
+
+  50% {
+    -webkit-transform: translate3d(0%, -5px, 0);
+    transform: translate3d(0%, -5px, 0);
+  }
+
+  
+}
+
+
+@keyframes bounce {
+  from, to {
+    -webkit-transform: translate3d(0%, 3px, 0);
+    transform: translate3d(0%, 3px, 0);
+  }
+
+
+
+  50% {
+    -webkit-transform: translate3d(0%, -5px, 0);
+    transform: translate3d(0%, -5px, 0);
+  }
+
+  
+}
+
+
+
+@media screen and (max-width: 360px){ 
+
+.home-screen .logo
+{
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  right: 10px;
+}
+
+.home-screen .title {
+top: 30%;
+}
+
+
+.home-screen .intro .tagline .bigger
+{
+  font-size: 22px;
+}
+.home-screen .intro .tagline
+{
+  font-size:14px;
+}
+
+.button
+{
+  border: 2px solid #fff;
+  height: 40px;
+  line-height:38px;
+  font-size: 14px;
+}
+.zin-answer{
+    font-size: 16px;
+
+}
+.quiz .quiz-body .question {
+    font-size: 16px;
+    margin: 40px 30px 20px 30px;
+}
+
+.upandcrop .upfile .des,
+.upload-demo-wrap .des
+{
+  font-size: 14px;
+}
+
+.quiz-03 .longanswer, 
+.quiz-04 .longanswer,
+.long-btn
+
+{
+    height: 50px;
+}
+
+.photo-frame
+{
+  width: 240px;
+  height: 260px;
+  padding: 7px;
+
+}
+
+.photo-ending-screen
+{
+  
+}
+
+.photo-ending-screen .end-intro {
+    font-size: 16px;
+}
+
+.photo-ending-screen .subtitle {
+    font-size: 14px;
+}
+
+.photo-ending-screen .guide {
+    font-size: 12px;
+}
+
+.end-quiz
+{
+  height: 50px;
+}
+
+.replay span
+{
+  font-size: 13.5px;
+  line-height: 15px;
+}
+
+.game-collapse
+{
+  width: 220px;
+      height: 220px;
+     
+}
+
+.scr-btn
+{
+  width: 44px;
+  height: 44px;
+  border:2px solid #fff;
+  bottom: 10px;
+  right: 10px;
+}
+
+.scr-arrow
+{
+  top: 8px;
+  left: 8px;
+}
+
+
+}
